@@ -7,12 +7,17 @@
  * @param {number} x
  * @return {boolean}
  */
+// 
+// The Problem:
+// var isPalindrome = function (x) {
+//     // ....
+// };
+
+// Start:
 var isPalindrome = function (x) {
-    return
+    let reversed = x.toString().split('').reverse().join('');
+    return (x.toString() === reversed)
 };
-
-
-
 
 // Example 1:
 
@@ -34,3 +39,20 @@ var isPalindrome = function (x) {
 // Output: false
 // Explanation: Reads 01 from right to left.Therefore it is not 
 // a palindrome.
+
+
+// Notes for the breakdown and answer:
+// 1. Start by setting reversed (let reversed) to the input of (x)
+// 2. Then I'm going to convert it to a string (x.toString())
+// 3. I'm going to split it (.split(''))
+// 4. Then I'm going to reverse it (.reverse())
+// 5. And then I'm going to join it (.join(''))
+// this is how you get a string and you reverse the string
+// 6. Now I need to take this reverse string and compare it to the input x
+// 7. To do that I say x.toString and just compare it/see if it's equal to reverse
+// 8. And by saying return, it'll give me a true or false
+// It should run with these results:
+
+// Your input: 121
+// Output: true
+// Expected: true

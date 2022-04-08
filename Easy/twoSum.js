@@ -31,7 +31,6 @@ var twoSum = function (nums, target) {
     }
 };
 
-
 // Breakdown:
 // Use a hash map for this problem, It'll store what we've seen so far and later recall if we have seen that particular num
 // So for the first example, were at (2) and the mssing number is (7), How do we know that because the target (9) minus the current num is (7)
@@ -45,8 +44,8 @@ var twoSum = function (nums, target) {
 // 4. Then say num2, the num were looking for is going to be the target minus num1 (let num2 = target - num1;)
 // 5. Then we're going to ask the map if it has this num2 (if (map.has(num2)))
 // 6. And now we're going to return an array with the first index and the index of the second num, 
-// so we're going ask the map to get us that second num's index. Because we store the num and its index return [i, map.get(num2)]
-// 7. if we haven't seen it then we're just going to set in the map, the first num/current num that we're at and its index 
+// so we're going ask the map to get us that second num's index. Because we store the num and its index (return [i, map.get(num2)])
+// 7. if we haven't seen it then we're just going to set in the map, the first num/current num that we're at and its index, 
 // that way we can recall it later and have the map return it to use in case we find the other pair (map.set(num1, i))
 
 // The time complexity here we be 0(n) because we are looping through each number

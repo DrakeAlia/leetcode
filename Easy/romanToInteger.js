@@ -97,7 +97,10 @@ var romanToInt = function (s) {
 // we do the subtraction case
 // 3. create a js object called symbols (var symbols) this will be a key value pair mapping 
 // 4. loop through the array
-// 5. if s[i] equals the roman numeral "I" and s[i +1] equals "V" (s[i] == "I" && (s[i + 1] == "V") or equals "X" (|| s[i + 1] == "X")
-// 6. Implement our test case (s[i] == "I" && (s[i + 1] == "V" || s[i + 1] == "X")) and within it say num plus/equals (num +=) (symbols[s[i+1]])
+// 5. if s[i] equals the roman numeral "I" and s[i +1] equals "V" (s[i] == "I" && (s[i + 1] == "V") or 
+// equals "X" (|| s[i + 1] == "X")
+// 6. Implement our test case (s[i] == "I" && (s[i + 1] == "V" || s[i + 1] == "X")) and within it say num plus/equals 
+// (num +=) (symbols[s[i+1]])
 // and minus the character ahead of it, (- symbols[s[i]]) and after that increment i (i++), 
-// we want to increment again due to i + 1 being used, so we skipp the next character 
+// we want to increment again due to (i + 1) being used, so we skip the next character 
+// 7. Have the other test cases setup ((s[i] == "X" && (s[i + 1] == "L" || s[i + 1] == "C")) and ((s[i] == "C" && (s[i + 1] == "D" || s[i + 1] == "M"))

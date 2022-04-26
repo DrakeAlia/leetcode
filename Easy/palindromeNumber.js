@@ -36,7 +36,60 @@
  * @return {boolean}
  */
 var isPalindrome = function (x) {
+    //     1. y = reverse x 
+    //     2. compare x to y
+    //     3. if x == y 
+    //     4. return true
+    const arrNums = x.toString().split('')
 
+    // how many loops this do?
+    let count = 0
+    console.log(arrNums.length);
+
+    while (arrNums.length > 1) {
+        count = count + 1
+        if (arrNums.shift() !== arrNums.pop()) {
+            return false
+        }
+    }
+    console.log(count)
+    return true
 };
 
 
+
+// var isPalindrome = function (x) {
+//     console.log(x)
+//     // 0. arrayify x [1,2,3]
+
+//     // created an array for x
+//     // convert the values of x inside the array to a string
+//     // split the string into a order of strings inside the array 
+//     const arrNums = x.toString().split('')
+//     console.log(arrNums)
+
+//     // point at the last item of x 
+//     // store that item
+//     // check if there is an item to the left it
+//     // if there is, point to that item
+//     // store that item
+//     // if there is, point to that item
+//     // store that item
+//     // if there is, point to that item
+//     // store that item 
+//     // if there no item is left, break out
+
+//     while (arrNums.length > 1) {
+//         // 2. compare x to y
+//         // 3. if x == y
+//         // check to see if the front of the array is equal to the 
+//         // back of the array
+//         if (arrNums.shift() !== arrNums.pop()) {
+
+//             return false
+//         }
+//     }
+
+//     return true
+// }
+// isPalindrome(123)

@@ -56,40 +56,29 @@ var isPalindrome = function (x) {
     return true
 };
 
-
+// // GOAL:
+// // Create a new array (X)
+// // Deconstruct array (X)
+// // Reverse the array (X)
+// // Compare the array ()
+// // Index a array ()
+// // Use .push() method (X)
 
 // var isPalindrome = function (x) {
-//     console.log(x)
-//     // 0. arrayify x [1,2,3]
 
-//     // created an array for x
-//     // convert the values of x inside the array to a string
-//     // split the string into a order of strings inside the array 
-//     const arrNums = x.toString().split('')
-//     console.log(arrNums)
+//     const arr = x.toString().split('')
+//     const arr2 = []
+//     console.log(arr)
 
-//     // point at the last item of x 
-//     // store that item
-//     // check if there is an item to the left it
-//     // if there is, point to that item
-//     // store that item
-//     // if there is, point to that item
-//     // store that item
-//     // if there is, point to that item
-//     // store that item 
-//     // if there no item is left, break out
+//     // how many loops does this do?
+//     // let count = 0
 
-//     while (arrNums.length > 1) {
-//         // 2. compare x to y
-//         // 3. if x == y
-//         // check to see if the front of the array is equal to the 
-//         // back of the array
-//         if (arrNums.shift() !== arrNums.pop()) {
-
-//             return false
-//         }
+//     for (let i = arr.length - 1; i >= 0; i--) {
+//         arr2.push(arr[i])
 //     }
 
-//     return true
+//     // console.log(count)
+//     console.log(arr2)
 // }
-// isPalindrome(123)
+
+// isPalindrome(123);

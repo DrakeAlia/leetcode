@@ -35,26 +35,28 @@
  * @param {number} x
  * @return {boolean}
  */
-var isPalindrome = function (x) {
-    //     1. y = reverse x 
-    //     2. compare x to y
-    //     3. if x == y 
-    //     4. return true
-    const arrNums = x.toString().split('')
 
-    // how many loops this do?
-    let count = 0
-    console.log(arrNums.length);
 
-    while (arrNums.length > 1) {
-        count = count + 1
-        if (arrNums.shift() !== arrNums.pop()) {
-            return false
-        }
-    }
-    console.log(count)
-    return true
-};
+// var isPalindrome = function (x) {
+//     //     1. y = reverse x 
+//     //     2. compare x to y
+//     //     3. if x == y 
+//     //     4. return true
+//     const arrNums = x.toString().split('')
+
+//     // how many loops this do?
+//     let count = 0
+//     console.log(arrNums.length);
+
+//     while (arrNums.length > 1) {
+//         count = count + 1
+//         if (arrNums.shift() !== arrNums.pop()) {
+//             return false
+//         }
+//     }
+//     console.log(count)
+//     return true
+// };
 
 // // GOAL:
 // // Create a new array (X)
@@ -64,21 +66,38 @@ var isPalindrome = function (x) {
 // // Index a array ()
 // // Use .push() method (X)
 
-// var isPalindrome = function (x) {
+var isPalindrome = function (x) {
 
-//     const arr = x.toString().split('')
-//     const arr2 = []
-//     console.log(arr)
 
-//     // how many loops does this do?
-//     // let count = 0
+    const numToString = x.toString()
+    const numStringArray = numToString.split('')
+    const reversedArray = []
 
-//     for (let i = arr.length - 1; i >= 0; i--) {
-//         arr2.push(arr[i])
+    for (let i = numStringArray.length - 1; i >= 0; i--) {
+        reversedArray.push(numStringArray[i])
+    }
+
+
+    // we want to compare the new array with the first array
+    // convert reverseArray into string
+    const reverseString = reversedArray.toString()
+
+    // removes commas from reverseString 
+    let reverseStringCleaned = reverseString.replace(/,/g, '');
+
+    // compare reverseString to numToString
+    // console.log(reverseStringCleaned === numToString)
+    // return the results
+    const ans = reverseStringCleaned === numToString
+    return ans
+}
+
+const anotherAns = isPalindrome(123)
+
+
+// const fuck = function () {
+//     if (isPalindrome(111) === true) {
+//         console.log('shit');
 //     }
-
-//     // console.log(count)
-//     console.log(arr2)
 // }
-
-// isPalindrome(123);
+// fuck()

@@ -1,7 +1,8 @@
 // Palindrome Number:
 
 // Given an integer x, return true if x is palindrome integer.
-// An integer is a palindrome when it reads the same backward as forward.
+// An integer is a palindrome when it reads the same 
+// backward as forward.
 
 // For example, 121 is a palindrome while 123 is not.
 
@@ -16,26 +17,28 @@
 
 // Input: x = -121
 // Output: false
-// Explanation: From left to right, it reads - 121. From right to left, 
+// Explanation: From left to right, it reads - 121. 
+// From right to left, 
 // it becomes 121 -.Therefore it is not a palindrome.
 
 // Example 3:
 
 // Input: x = 10
 // Output: false
-// Explanation: Reads 01 from right to left.Therefore it is not 
+// Explanation: Reads 01 from right to left.Therefore it 
+// is not 
 // a palindrome.
 
 // Constraints:
 
 // -2^31 <= x <= 2^31 - 1
-// Follow up: Could you solve it without converting the integer to a string ?
+// Follow up: Could you solve it without converting the 
+// integer to a string ?
 
 /**
  * @param {number} x
  * @return {boolean}
  */
-
 
 // var isPalindrome = function (x) {
 //     //     1. y = reverse x 
@@ -58,42 +61,51 @@
 //     return true
 // };
 
-// // GOAL:
-// // Create a new array (X)
-// // Deconstruct array (X)
-// // Reverse the array (X)
-// // Compare the array ()
-// // Index a array ()
-// // Use .push() method (X)
+// GOAL:
+// 1. Convert the numbers into strings, using toString() 
+// method (X)
+// 2. Put the strings into an array, using split() method (X)
+// 3. Create a new array (X)
+// 4. Deconstruct the array (X)
+// 5. Reverse the array (X)
+// 6. Use .push() method to push in new elements in 
+// the array (X)
+// 7. Convert the new array numbers into strings (X)
+// 8. Use .replace() method to remove the commas in 
+// reverse array (X)
+// 9. Compare the arrays (X)
+// 10. Return the results as a boolean(true/false) (X)
 
 var isPalindrome = function (x) {
 
-
+    // Convert the numbers into strings
     const numToString = x.toString()
+    // Put the strings into an array
     const numStringArray = numToString.split('')
+    // Create a new array 
     const reversedArray = []
 
+    // Iterate over the the first array in reverse order 
     for (let i = numStringArray.length - 1; i >= 0; i--) {
         reversedArray.push(numStringArray[i])
     }
 
-
-    // we want to compare the new array with the first array
-    // convert reverseArray into string
+    // We want to compare the new array with the first array
+    // Convert reverseArray into strings
     const reverseString = reversedArray.toString()
 
-    // removes commas from reverseString 
+    // Remove commas from reverseString
     let reverseStringCleaned = reverseString.replace(/,/g, '');
 
-    // compare reverseString to numToString
+    // Compare reverseString to numToString
     // console.log(reverseStringCleaned === numToString)
-    // return the results
+    // Return the results/answers
     const ans = reverseStringCleaned === numToString
     return ans
 }
+// isPalindrome(123)
 
 const anotherAns = isPalindrome(123)
-
 
 // const fuck = function () {
 //     if (isPalindrome(111) === true) {

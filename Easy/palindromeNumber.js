@@ -66,14 +66,16 @@
 // method (X)
 // 2. Put the strings into an array, using split() method (X)
 // 3. Create a new array (X)
-// 4. Deconstruct the array (X)
-// 5. Reverse the array (X)
+// 4. Deconstruct the first array (X)
+// 5. Reverse the first array (X)
 // 6. Use .push() method to push in new elements in 
-// the array (X)
+// the new array (X)
 // 7. Convert the new array numbers into strings (X)
 // 8. Use .replace() method to remove the commas in 
 // reverse array (X)
 // 9. Compare the arrays (X)
+// ---> Instead of comparing them as arrays, compare the 
+// two as strings <---
 // 10. Return the results as a boolean(true/false) (X)
 
 var isPalindrome = function (x) {
@@ -113,3 +115,26 @@ const anotherAns = isPalindrome(123)
 //     }
 // }
 // fuck()
+
+// Time Complexity: 0(n) linear time
+// Space Complexity:
+
+
+
+
+
+
+var twoSum = function (nums, target) {
+    // const output = []
+
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+        }
+    }
+};
+// return output
+
+twoSum()
+
+// i = first pointer
+// j = second poitner

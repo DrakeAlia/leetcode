@@ -43,17 +43,28 @@
  * @param {number} target
  * @return {number[]}
  */
+// GOAL:
+// 1. create an empty output array ?
+// 2. iterate over each of the  elements in our array 
+// with a loop
+// 3. create another loop to look for the value that is 
+// equal to our target if we sum both numbers
+// 4. return the indices in our empty output array
+// i = first pointer
+// j = second poitner
 var twoSum = function (nums, target) {
-    // const output = []
-
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+        // -> console.log(nums[i, j]) **** INCORRECT!!!
+                console.log([i,j])
+                return [i, j]
+            }
         }
     }
 };
-// return output
+twoSum([2, 7, 11, 15], 9)
+// test case:
+// nums = [2,7,11,15]
+// target = 9
 
-twoSum()
-
-// i = first pointer
-// j = second poitner

@@ -4,7 +4,7 @@
 
 // ## Instructions:
 
-// 1. Define an `addFavoriteBook(..)` function that receives a single parameter, called`bookName`.
+// 1. Define an `addFavoriteBook(..)` function that receives a single parameter, called `bookName`.
 
 // 2. If the provided `bookName` string does * NOT * have the word "Great" in it, 
 // add it to the `favoriteBooks` array.
@@ -33,19 +33,10 @@
 // Make sure to then call the `printFavoriteBooks()` function at the end of the program.
 
 // TODO: define addFavoriteBook(..) function
-function addFavoriteBook(bookName) {
-    if (!bookName.includes("Great")) {
-        favoriteBooks.push(bookName)
-    }
-}
+
 
 // TODO: define printFavoriteBooks() function
-function printFavoriteBooks() {
-    console.log(`Favorite Books: ${favoriteBooks.length}`)
-    for (let bookName of favoriteBooks) {
-        console.log(bookName)
-    }
-}
+
 
 var favoriteBooks = [];
 
@@ -56,4 +47,3 @@ addFavoriteBook("Great Expectations");
 addFavoriteBook("You Don't Know JS");
 
 // TODO: print out favorite books
-printFavoriteBooks()

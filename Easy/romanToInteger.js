@@ -1,5 +1,6 @@
 // Roman to Integer:
 
+// Given a roman numeral, convert it to an integer.
 // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
 // Symbol       Value
@@ -22,8 +23,6 @@
 // I can be placed before V(5) and X(10) to make 4 and 9. !!!!
 // X can be placed before L(50) and C(100) to make 40 and 90.  !!!!!
 // C can be placed before D(500) and M(1000) to make 400 and 900. !!!!!!
-
-// Given a roman numeral, convert it to an integer.
 
 // Example 1:
 
@@ -50,11 +49,63 @@
 // s contains only the characters('I', 'V', 'X', 'L', 'C', 'D', 'M').
 // It is guaranteed that s is a valid roman numeral in the range[1, 3999]
 
+// GOAL
+// 1. map each symbol to its value
+// 2. create a variable that represents the roman numeral converted
+// into a integer and its total
+// 3. loop over the symbols in order convert the numerals into 
+// integers
+// 4. if the numerals on the left is smaller then the ones on 
+// the right then the larger number is subtracted by the smaller 
+// number
+// 5. otherwise add the numerals together
+// 6. return the total at the end of the order
+
+
 // Problem:
 /**
  * @param {string} s
  * @return {number}
  */
-var romanToInt = function (s) {
 
+var romanToInt = function (s) {
+    // 1. map each symbol to its value
+    const symbol = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    // 2. create a variable that represents the roman numeral converted
+    // into a integer and its total
+    let total = 0
+    // 3. loop over the symbols in order convert the numerals into 
+    // integers
+    for (let i = 0; i < s.length; i++) {
+        // 4. if the numerals on the left is smaller then the ones on 
+        // the right then the larger number is subtracted by the smaller 
+        // number
+        if (symbol[s[i]] < symbol[s[i + 1]]) {
+            total -= symbol[s[i]]
+        }
+        // 5. otherwise add the numerals together
+        else {
+            total += symbol[s[i]]
+        }
+        console.log(total)
+    }
+    // 6. return the total at the end of the order
+    return total
 };
+romanToInt("III")
+
+// "III"
+// "LVIII"
+// "MCMXCIV"
+
+
+
+

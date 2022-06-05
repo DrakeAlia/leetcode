@@ -35,6 +35,7 @@
 // Follow up: Could you solve it without converting the 
 // integer to a string ?
 
+// Problem:
 /**
  * @param {number} x
  * @return {boolean}
@@ -118,10 +119,6 @@ const anotherAns = isPalindrome(123)
 
 // Time Complexity: 0(n) linear time
 // Space Complexity:
-
-
-
-
 
 
 var twoSum = function (nums, target) {

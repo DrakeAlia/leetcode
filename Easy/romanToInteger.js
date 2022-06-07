@@ -85,9 +85,9 @@ var romanToInt = function (s) {
     // 3. loop over the symbols in order convert the numerals into 
     // integers
     for (let i = 0; i < s.length; i++) {
-        // 4. if the numerals on the left is smaller then the ones on 
-        // the right then the larger number is subtracted by the smaller 
-        // number
+        // 4. if the current value is less then the next value 
+        // then the larger value is subtracted by the smaller 
+        // value and its result is added to the total
         if (symbol[s[i]] < symbol[s[i + 1]]) {
             total -= symbol[s[i]]
         }

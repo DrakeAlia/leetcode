@@ -55,8 +55,8 @@ var twoSum = function (nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
             if (nums[i] + nums[j] === target) {
-        // -> console.log(nums[i, j]) X
-                console.log([i,j])
+                // -> console.log(nums[i, j]) X
+                console.log([i, j])
                 return [i, j]
             }
         }

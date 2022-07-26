@@ -6,6 +6,7 @@
 4. Valid Parentheses ()
 5. Merge Two Sorted List ()
 6. Longest Common Prefix ()
+7. Remove Element ()
 
 ************************** MEDIUM ******************************
 

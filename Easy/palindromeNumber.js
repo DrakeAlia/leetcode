@@ -35,32 +35,10 @@
 // Follow up: Could you solve it without converting the 
 // integer to a string ?
 
-// Problem:
 /**
  * @param {number} x
  * @return {boolean}
  */
-
-// var isPalindrome = function (x) {
-//     //     1. y = reverse x 
-//     //     2. compare x to y
-//     //     3. if x == y 
-//     //     4. return true
-//     const arrNums = x.toString().split('')
-
-//     // how many loops this do?
-//     let count = 0
-//     console.log(arrNums.length);
-
-//     while (arrNums.length > 1) {
-//         count = count + 1
-//         if (arrNums.shift() !== arrNums.pop()) {
-//             return false
-//         }
-//     }
-//     console.log(count)
-//     return true
-// };
 
 // GOAL:
 // 1. Convert the numbers into strings, using toString() 
@@ -80,58 +58,84 @@
 // 10. Return the results as a boolean(true/false) (X)
 
 var isPalindrome = function (x) {
-
-    // Convert the numbers into strings
+    
+    // 1. Convert the numbers into strings
     const numToString = x.toString()
-    // Put the strings into an array
+    // 2. Put the strings into an array
     const numStringArray = numToString.split('')
-    // Create a new array 
+    // 3. Create a new array 
     const reversedArray = []
-
-    // Iterate over the the first array in reverse order 
+    
+    // 4. & 5. Iterate over the the first array in reverse order 
     for (let i = numStringArray.length - 1; i >= 0; i--) {
+        // 6. Use .push() method to push in new elements in 
+        // the new array (X)
         reversedArray.push(numStringArray[i])
     }
-
+    
     // We want to compare the new array with the first array
-    // Convert reverseArray into strings
+    // 7. Convert reverseArray into strings
     const reverseString = reversedArray.toString()
-
-    // Remove commas from reverseString
+    
+    // 8. Remove commas from reverseString
     let reverseStringCleaned = reverseString.replace(/,/g, '');
-
-    // Compare reverseString to numToString
+    
+    // 9. Compare reverseString to numToString
     // console.log(reverseStringCleaned === numToString)
-    // Return the results/answers
+    // 10. Return the results/answers
     const ans = reverseStringCleaned === numToString
     return ans
 }
 // isPalindrome(123)
 
+
+// Alternative answer:
+
 const anotherAns = isPalindrome(123)
 
 // const fuck = function () {
-//     if (isPalindrome(111) === true) {
-//         console.log('shit');
-//     }
-// }
-// fuck()
-
-// Time Complexity: 0(n) linear time
-// Space Complexity:
-
-
-var twoSum = function (nums, target) {
-    // const output = []
-
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-        }
-    }
-};
-// return output
-
-twoSum()
-
-// i = first pointer
-// j = second poitner
+    //     if (isPalindrome(111) === true) {
+        //         console.log('shit');
+        //     }
+        // }
+        // fuck()
+        
+        // Time Complexity: 0(n) linear time
+        // Space Complexity:
+        
+        
+        var twoSum = function (nums, target) {
+            // const output = []
+            
+            for (let i = 0; i < nums.length; i++) {
+                for (let j = i + 1; j < nums.length; j++) {
+                }
+            }
+        };
+        // return output
+        
+        twoSum()
+        
+        // i = first pointer
+        // j = second poitner
+        
+        // var isPalindrome = function (x) {
+        //     //     1. y = reverse x 
+        //     //     2. compare x to y
+        //     //     3. if x == y 
+        //     //     4. return true
+        //     const arrNums = x.toString().split('')
+        
+        //     // how many loops this do?
+        //     let count = 0
+        //     console.log(arrNums.length);
+        
+        //     while (arrNums.length > 1) {
+        //         count = count + 1
+        //         if (arrNums.shift() !== arrNums.pop()) {
+        //             return false
+        //         }
+        //     }
+        //     console.log(count)
+        //     return true
+        // };

@@ -42,6 +42,7 @@
  * @param {number} target
  * @return {number[]}
  */
+
 // GOAL:
 // 1. create an empty output array ?
 // 2. iterate over each of the  elements in our array 
@@ -51,6 +52,7 @@
 // 4. return the indices in our empty output array
 // i = first pointer
 // j = second poitner
+
 var twoSum = function (nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {

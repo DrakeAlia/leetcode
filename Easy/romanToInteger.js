@@ -49,6 +49,13 @@
 // s contains only the characters('I', 'V', 'X', 'L', 'C', 'D', 'M').
 // It is guaranteed that s is a valid roman numeral in the range[1, 3999]
 
+
+// Problem:
+/**
+ * @param {string} s
+ * @return {number}
+ */
+
 // GOAL
 // 1. map each symbol to its value
 // 2. create a variable that represents the roman numeral converted
@@ -60,12 +67,6 @@
 // value and its result is added to the total
 // 5. otherwise add the numerals together
 // 6. return the total at the end of the order
-
-// Problem:
-/**
- * @param {string} s
- * @return {number}
- */
 
 var romanToInt = function (s) {
     // 1. map each symbol to its value

@@ -37,20 +37,25 @@
 
 // GOAL:
 // 1. initialize the stack data structure which is an array
+
 // 2. loop through the values in the strings
+
 // 3. extract string at i and put in character variable
+
 // 4. if character is equal to an open bracket or equal to 
 // an open curly bracket or equal to an open square curly bracket,
 // then push() into stack with that value
+
 // 5. else we need to get the previous value else which going 
 // to equal stack.pop(), going to pop off the stack because 
 // stack data structure is last in first out 
-// 6. create a number of cases,
-// 7. if previous value is equal to an open curly brace and the 
+
+// 6. if previous value is equal to an open curly brace and the 
 // character that we are currently on does not equal a 
 // closing brace then the open brackets are not being closed 
 // in the correct order, return false 
-// 9. return the emptied stack at the end(the string is all open brackets)
+
+// 7. return the emptied stack at the end(the string is all open brackets)
 
 // Problem:
 /**
@@ -59,7 +64,32 @@
  */
 
 var isValid = function (s) {
-
+    // 1.
+    let stack = []
+    // 2.
+    for (let i = 0; i < s.length; i++) {
+        // 3.
+        let char = s[i]
+        // 4.
+        if (char === "(" || char === "{" || char === "[") {
+            stack.push(char)
+            // 5.
+        } else {
+            let preValue = stack.pop()
+            // 6.
+            if (preValue === "(" && char !== ")")
+                return false
+            if (preValue === "{" && char !== "}")
+                return false
+            if (preValue === "[" && char !== "]")
+                return false
+            if (preValue === undefined)
+                return false
+        }
+        console.log(char)
+    }
+    // 7.
+    return stack.length === 0
 }
 
 

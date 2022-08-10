@@ -42,50 +42,58 @@
 
 // GOAL:
 // 1. Convert the numbers into strings, using toString() 
-// method (X)
-// 2. Put the strings into an array, using split() method (X)
-// 3. Create a new array (X)
-// 4. Deconstruct the first array (X)
-// 5. Reverse the first array (X)
+// method
+
+// 2. Put the strings into an array, using split() method
+
+// 3. Create a new array
+
+// 4. Deconstruct the first array
+
+// 5. Reverse the first array
+
 // 6. Use .push() method to push in new elements in 
-// the new array (X)
-// 7. Convert the new array numbers into strings (X)
+// the new array
+
+// 7. Convert the new array numbers into strings
 // 8. Use .replace() method to remove the commas in 
-// reverse array (X)
-// 9. Compare the arrays (X)
+// reverse array
+
+// 9. Compare the arrays, reverseString to numToStrin
 // ---> Instead of comparing them as arrays, compare the 
 // two as strings <---
-// 10. Return the results as a boolean(true/false) (X)
+
+// 10. Return the results as a boolean(true/false)
 
 var isPalindrome = function (x) {
     
-    // 1. Convert the numbers into strings
+    // 1. 
     const numToString = x.toString()
-    // 2. Put the strings into an array
+    // 2. 
     const numStringArray = numToString.split('')
-    // 3. Create a new array 
+    // 3.
     const reversedArray = []
     
     // 4. & 5. Iterate over the the first array in reverse order 
     for (let i = numStringArray.length - 1; i >= 0; i--) {
-        // 6. Use .push() method to push in new elements in 
-        // the new array (X)
+        // 6.
         reversedArray.push(numStringArray[i])
     }
     
     // We want to compare the new array with the first array
-    // 7. Convert reverseArray into strings
+    // 7.
     const reverseString = reversedArray.toString()
     
-    // 8. Remove commas from reverseString
+    // 8.
     let reverseStringCleaned = reverseString.replace(/,/g, '');
     
-    // 9. Compare reverseString to numToString
+    // 9.
     // console.log(reverseStringCleaned === numToString)
-    // 10. Return the results/answers
+    // 10.
     const ans = reverseStringCleaned === numToString
     return ans
 }
+
 // isPalindrome(123)
 
 

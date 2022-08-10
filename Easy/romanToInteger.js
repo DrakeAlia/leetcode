@@ -56,20 +56,25 @@
  * @return {number}
  */
 
-// GOAL
+// GOAL:
 // 1. map each symbol to its value
+
 // 2. create a variable that represents the roman numeral converted
 // into a integer and its total
+
 // 3. loop over the symbols in order convert the numerals into 
 // integers
+
 // 4. if the current value is less then the next value 
 // then the larger value is subtracted by the smaller
 // value and its result is added to the total
+
 // 5. otherwise add the numerals together
+
 // 6. return the total at the end of the order
 
 var romanToInt = function (s) {
-    // 1. map each symbol to its value
+    // 1. 
     const symbol = {
         'I': 1,
         'V': 5,
@@ -79,25 +84,21 @@ var romanToInt = function (s) {
         'D': 500,
         'M': 1000
     }
-    // 2. create a variable that represents the roman numeral converted
-    // into a integer and its total
+    // 2.
     let total = 0
-    // 3. loop over the symbols in order convert the numerals into 
-    // integers
+    // 3. 
     for (let i = 0; i < s.length; i++) {
-        // 4. if the current value is less then the next value 
-        // then the larger value is subtracted by the smaller 
-        // value and its result is added to the total
+        // 4.
         if (symbol[s[i]] < symbol[s[i + 1]]) {
             total -= symbol[s[i]]
         }
-        // 5. otherwise add the numerals together
+        // 5.
         else {
             total += symbol[s[i]]
         }
         console.log(total)
     }
-    // 6. return the total at the end of the order
+    // 6.
     return total
 };
 romanToInt("III")

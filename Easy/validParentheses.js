@@ -40,22 +40,23 @@
 
 // 2. loop through the values in the strings
 
-// 3. extract string at i and put in character variable
+// 3. extract string(s) at i and put in character(char) variable
 
 // 4. if character is equal to an open bracket or equal to 
 // an open curly bracket or equal to an open square curly bracket,
 // then push() into stack with that value
 
-// 5. else we need to get the previous value else which going 
-// to equal stack.pop(), going to pop off the stack because 
+// 5. else we need to get the previous value(preValue) which is going 
+// to equal stack.pop() in order to pop off the stack because 
 // stack data structure is last in first out 
 
-// 6. if previous value is equal to an open curly brace and the 
-// character that we are currently on does not equal a 
+// 6. if previous value(preValue) is equal to an open curly brace and the 
+// character(char) that we are currently on does not equal a 
 // closing brace then the open brackets are not being closed 
 // in the correct order, return false 
 
-// 7. return the emptied stack at the end(the string is all open brackets)
+// 7. return the emptied stack at the end
+// (the string is all open brackets)
 
 // Problem:
 /**

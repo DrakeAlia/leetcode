@@ -52,8 +52,7 @@
 // equal to our target if we sum both numbers
 
 // 3. return the indices in our empty output array
-// i = first pointer
-// j = second poitner
+// (i = first pointer & j = second poitner)
 
 var twoSum = function (nums, target) {
     // 1.
@@ -61,7 +60,7 @@ var twoSum = function (nums, target) {
         // 2.
         for (let j = i + 1; j < nums.length; j++) {
             if (nums[i] + nums[j] === target) {
-                // -> console.log(nums[i, j]) X
+                // -> console.log(nums[i, j]) *incorrect console.log postion
                 console.log([i, j])
                 // 3.
                 return [i, j]

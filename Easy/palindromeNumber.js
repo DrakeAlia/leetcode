@@ -48,49 +48,41 @@
 
 // 3. Create a new array
 
-// 4. Deconstruct the first array
+// 4. Deconstruct the first array and reverse the first array
 
-// 5. Reverse the first array
-
-// 6. Use .push() method to push in new elements in 
+// 5. Use .push() method to push in new elements in 
 // the new array
 
-// 7. Convert the new array numbers into strings
-// 8. Use .replace() method to remove the commas in 
-// reverse array
+// 6. Convert the new array numbers into strings
+// 7. Use .replace() method to remove the commas in 
+// reverse array, we want to compare the new array with the first array
 
-// 9. Compare the arrays, reverseString to numToStrin
-// ---> Instead of comparing them as arrays, compare the 
-// two as strings <---
+// 8. Compare the arrays, reverseString to numToStrin
+// Instead of comparing them as arrays, compare the 
+// two as strings
 
-// 10. Return the results as a boolean(true/false)
+// 9. Return the results as a boolean(true/false)
 
 var isPalindrome = function (x) {
-    
     // 1. 
     const numToString = x.toString()
     // 2. 
     const numStringArray = numToString.split('')
     // 3.
     const reversedArray = []
-    
-    // 4. & 5. Iterate over the the first array in reverse order 
+    // 4.
     for (let i = numStringArray.length - 1; i >= 0; i--) {
-        // 6.
+        // 5.
         reversedArray.push(numStringArray[i])
     }
-    
-    // We want to compare the new array with the first array
-    // 7.
+    // 6.
     const reverseString = reversedArray.toString()
-    
-    // 8.
+    // 7.
     let reverseStringCleaned = reverseString.replace(/,/g, '');
-    
-    // 9.
     // console.log(reverseStringCleaned === numToString)
-    // 10.
+    // 8.
     const ans = reverseStringCleaned === numToString
+    // 9.
     return ans
 }
 
